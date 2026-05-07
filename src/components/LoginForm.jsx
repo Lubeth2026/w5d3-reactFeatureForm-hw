@@ -1,11 +1,12 @@
 
 import React from 'react'
+import Button from './Button';
 
-function LoginForm({ loginData, handleChange }) {
+function LoginForm({ loginData, handleChange, handleSubmit }) {
   return (
     <div>
       <h2>Please Login</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="email">Email:
           <input type="email" name="email" id="email" value={loginData.email} onChange={handleChange}/>
         </label>
@@ -20,7 +21,7 @@ function LoginForm({ loginData, handleChange }) {
         <label htmlFor="age">Age:
           <input type="number" name="age" id="age" value={loginData.age} onChange={handleChange}/>
         </label>
-        <button>Submit!</button>
+        <Button text="Submit" color="blue"/>
       </form>
     </div>
   );

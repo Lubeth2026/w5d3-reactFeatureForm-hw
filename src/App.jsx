@@ -11,19 +11,26 @@ function App() {
     password: "",
     age: "",
   });
-
+//This tracks form to see if it's being Submitted//SUBMIT STATE//
+  const [submitted, setSubmitted] = useState(false);
 //FORM state UPDATE//
 //Handle Input Changes//
   function handleChange(event) {
     const { name, value } = event.target;
-    console.log(name, value);
+    //console.log(name, value);
     setLoginData({ ...loginData, [name]: value });
+  };
+//Handle Form Submit//
+  function handleSubmit(event) {
+    event.preventDefault();
+    setSubmitted(true);
+    console.log(loginData)
   }
 
   return (
     <>
       <h1>React Form Day 3 Assignment</h1>
-      <LoginForm loginData={loginData} handleChange={handleChange} />
+      <LoginForm loginData={loginData} handleChange={handleChange} handleSubmit={handleSubmit}/>
     </>
   );
 }
