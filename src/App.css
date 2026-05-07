@@ -1,1 +1,30 @@
 
+h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+}
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: underline;
+  font-family: sans-serif;
+}
+form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 15px;
+  margin: 0 auto;
+}
+form label{
+  display: flex;
+  justify-content: space-evenly;
+}
