@@ -7,7 +7,7 @@ function App() {
 //Login Form Data object to store all inputs//FORM STATE//
   const [loginData, setLoginData] = useState({
     email: "",
-    name: "",
+    username: "",
     password: "",
     age: "",
   });
@@ -31,6 +31,15 @@ function App() {
     <>
       <h1>React Form Day 3 Assignment</h1>
       <LoginForm loginData={loginData} handleChange={handleChange} handleSubmit={handleSubmit}/>
+      {submitted && (
+        <div>
+          <h3>Submitted Login Data</h3>
+          <p>Email: {loginData.email}</p>
+          <p>Username: {loginData.username}</p>
+          <p>Password: {loginData.password}</p>
+          <p>Age: {loginData.age}</p>
+        </div>
+      )}
     </>
   );
 }
